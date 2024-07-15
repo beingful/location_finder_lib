@@ -1,39 +1,34 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Location finder library
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+## Description
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+This is a library with Google Maps support.
+<p>The project aka "location finder" is designed to create a widget featured with Google map with markers provided by a consumer on it.</p> 
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+________________________________________________________________________________________________________
 
-## Features
+## Setup
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+1. Clone this repository into your project's lib folder.
 
-## Getting started
+2. Add new dependency into your project's pubspec.yaml file as shown:
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+  ```
+    dependencies:
+      # ... other project's dependencies
 
-## Usage
+      location_finder: # the lib as a dependency
+        path: lib/location_finder # local path
+  ```
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+3. Use GeoMap widget to get a Google Map with your custom markers on it.
 
-```dart
-const like = 'sample';
-```
+4. (optional) Style the map by adding .json files at the end of your project's pubspec.yaml file as shown:
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+  ```
+    flutter:
+      assets:
+        - lib/location_finder/assets/style/map/classic_dark.json
+        - lib/location_finder/assets/style/map/black_pink.json
+        - lib/location_finder/assets/style/map/silver_pink.json
+  ```
